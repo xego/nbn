@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file plugins/pubIds/nbn/NBNPubIdPlugin.inc.php
  *

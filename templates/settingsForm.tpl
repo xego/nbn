@@ -10,6 +10,7 @@
  *}
 
 <div id="urnSettings">
+
 <div id="description">{translate key="plugins.pubIds.nbn.manager.settings.description"}</div>
 
 <div class="separator"></div>

@@ -9,6 +9,7 @@
  * Edit custom NBN suffix for an object (issue, submission, file)
  *
  *}
+
 {assign var=isPublished value=$pubIdPlugin->isPublished($pubObject)}
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
 {assign var=enableObjectNBN value=$pubIdPlugin->getSetting($currentContext->getId(), "enabled")}

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @defgroup plugins_pubIds_nbn
  */

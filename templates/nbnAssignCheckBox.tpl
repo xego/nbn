@@ -8,7 +8,7 @@
  * Displayed only if the NBN can be assigned.
  * Assign NBN form check box included in nbnSuffixEdit.tpl and nbnAssign.tpl.
  *}
-
+ 
 {capture assign=translatedObjectType}{translate key="plugins.pubIds.nbn.editor.nbnObjectType"|cat:$pubObjectType}{/capture}
 {capture assign=assignCheckboxLabel}{translate key="plugins.pubIds.nbn.editor.assignNBNtoArticle" pubId=$pubId pubObjectType=$translatedObjectType}{/capture}
 {fbvFormSection list=true}
