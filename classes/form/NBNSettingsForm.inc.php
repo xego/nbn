@@ -21,11 +21,28 @@ class NBNSettingsForm extends Form {
    //
    // Private properties
    //
-   /** @var integer */
-   var $_journalId;
+   	/** @var integer */
+	var $_contextId;
+   
+	/**
+	 * Get the context ID.
+	 * @return integer
+	 */
+	function _getContextId() {
+		return $this->_contextId;
+	}
+	
+	/** @var NBNPubIdPlugin */
+	var $_plugin;
 
-   /** @var NBNPubIdPlugin */
-   var $_plugin;
+	/**
+	 * Get the plugin.
+	 * @return NBNPubIdPlugin
+	 */
+	function _getPlugin() {
+		return $this->_plugin;
+	}
+
 
    //
    // Constructor
@@ -35,29 +52,35 @@ class NBNSettingsForm extends Form {
     * @param $plugin NBNPubIdPlugin
     * @param $journalId integer
     */
-   function NBNSettingsForm(&$plugin, $journalId) {
-      $this->_journalId = $journalId;
-      $this->_plugin =& $plugin;
+   function __construct($plugin, $contextId) {
+	   
+      $this->_contextId = $contextId;
+      $this->_plugin = $plugin;
 
-      parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-      $this->addCheck(new FormValidatorRegExp($this, 'username', 'required', 'plugins.pubIds.nbnit.manager.settings.form.usernameRequired', '/^[^:]+$/'));
-      $this->addCheck(new FormValidatorRegExp($this, 'password', 'required', 'plugins.pubIds.nbnit.manager.settings.form.passwordRequired', '/^[^:]+$/'));
+      parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+
+      $this->addCheck(new FormValidatorRegExp($this, 'username', 'required', 'plugins.pubIds.nbn.manager.settings.form.usernameRequired', '/^[^:]+$/'));
+      $this->addCheck(new FormValidatorRegExp($this, 'password', 'required', 'plugins.pubIds.nbn.manager.settings.form.passwordRequired', '/^[^:]+$/'));
       $this->addCheck(new FormValidatorPost($this));
    }
+   
 
 
    /**
     * @see Form::initData()
     */
-   function initData() {
-      $journalId = $this->_journalId;
-      $plugin =& $this->_plugin;
-
-      foreach($this->_getFormFields() as $fieldName => $fieldType) {
-         $this->setData($fieldName, $plugin->getSetting($journalId, $fieldName));
-      }
-   }
+	function initData() {
+		
+		$contextId = $this->_getContextId();
+		 //var_dump($contextId);
+		$plugin = $this->_getPlugin();
+		
+		foreach($this->_getFormFields() as $fieldName => $fieldType) {
+			//var_dump($this);
+			$this->setData($fieldName, $plugin->getSetting($contextId, $fieldName));
+		}
+	}
 
    /**
     * @see Form::readInputData()
@@ -69,14 +92,13 @@ class NBNSettingsForm extends Form {
    /**
     * @see Form::validate()
     */
-   function execute() {
-      $plugin =& $this->_plugin;
-      $journalId = $this->_journalId;
-
-      foreach($this->_getFormFields() as $fieldName => $fieldType) {
-         $plugin->updateSetting($journalId, $fieldName, $this->getData($fieldName), $fieldType);
-      }
-   }
+   	function execute() {
+		$contextId = $this->_getContextId();
+		$plugin = $this->_getPlugin();
+		foreach($this->_getFormFields() as $fieldName => $fieldType) {
+			$plugin->updateSetting($contextId, $fieldName, $this->getData($fieldName), $fieldType);
+		}
+	}
 
    //
    // Private helper methods

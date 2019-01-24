@@ -6,51 +6,66 @@
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Contributed by CILEA
+  * Upgraded to OJS3 by Alfredo Cosco (2019)
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT locale.
   -->
  
 <locale name="it_IT" full_name="Italiano">
-   <message key="plugins.pubIds.nbnit.urns">URN</message>
+	<message key="plugins.pubIds.nbn.nbns">NBN</message>
+	<message key="plugins.pubIds.nbn.editor.nbn">NBN:IT</message>
+	<message key="plugins.pubIds.nbn.editor.editObjectsNBN">Genera NBN:IT</message>
+	<message key="plugins.pubIds.nbn.editor.editMultipleObjectsNBN">Genera NBN:IT per tutti gli articoli in questo numero</message>
+	<message key="plugins.pubIds.nbn.editor.nbnIs">L'NBN di questo item è</message>
+	<message key="plugins.pubIds.nbn.editor.canBeAssigned">Può essere assegnato</message>
+	<message key="plugins.pubIds.nbn.editor.stillAssigned">NBN:IT assegnato a questo articolo</message>
+	<message key="plugins.pubIds.nbn.editor.assignNBN">Assegna NBN:IT</message>
+	<message key="plugins.pubIds.nbn.editor.assignNBNtoArticle">Assegna NBN:IT a questo articolo</message>
+	<message key="plugins.pubIds.nbn.editor.assignNBNtoIssue">Assegna NBN:IT a tutti gli articoli in questo numero</message>
+	<message key="plugins.pubIds.nbn.editor.unPublishedIssue">Si può richiedere un NBN solo dopo la pubblicazione del Numero/Volume</message>
+	<message key="plugins.pubIds.nbn.editor.issueArticlesDontHaveNBN">Nessuno o non tutti gli articoli in questo numero hanno un NBN:IT, clicca qui per integrare gli identificatori mancanti.</message>	
+	<message key="plugins.pubIds.nbn.editor.issueAllArticlesHaveNBN">NBN:IT esiste per tutti gli articoli in questo numero, puoi assegnarli articolo per articolo nella pagina: Submission/Metadata/Identifier.</message>
 
    <!-- plugin -->
-   <message key="plugins.pubIds.nbnit.displayName">NBN:IT</message>
-   <message key="plugins.pubIds.nbnit.description">Questo plugin abilita l'assegnazione di NBN:IT agli articoli pubblicati in OJS.</message>
-   <message key="plugins.pubIds.nbnit.issues">Registra per fascicoli</message>
-   <message key="plugins.pubIds.nbnit.articles">Registra singoli articoli</message>
-   <message key="plugins.pubIds.nbnit.registeredFilter">Articoli non registrati</message>
-   <message key="plugins.pubIds.nbnit.registered">Registrato</message>
-   <message key="plugins.pubIds.nbnit.filter">Filtra</message>
-   <message key="plugins.pubIds.nbnit.noArticles">Nessun articolo soddisfa la ricerca effettuata.</message>
-   <message key="plugins.pubIds.nbnit.registerDescription">Clicca il bottone per registrare questo articolo</message>
-   <message key="plugins.pubIds.nbnit.registerDescription.multi">Clicca il bottone per registrare o aggiornare la registrazione degli articoli selezionati.</message>   
-   <message key="plugins.pubIds.nbnit.register.title">Registra NBN</message>   
-   <message key="plugins.pubIds.nbnit.register.selectArticle">Seleziona gli articoli</message>
-   <message key="plugins.pubIds.nbnit.register.selectIssue">Seleziona i fascicoli</message>      
-   <message key="plugins.pubIds.nbnit.register">Registrazione</message>
-   <message key="plugins.pubIds.nbnit.register.success">Registrazione conclusa con successo!</message>
-   <message key="plugins.pubIds.nbnit.register.warning">Registrare molti oggetti può richiedere molto tempo. Sii quindi paziente dopo aver cliccato il tasto 'Registra'. Sarai informato al completamento della registrazione.</message>   
-   <message key="plugins.pubIds.nbnit.register.noCredentials"><![CDATA[La registrazione diretta è ancora disabilitata. <a href="{$settingsUrl}">Inserisci</a> le credenziali per registrare le risorse direttamente con l'agenzia di registrazione.]]></message>
+   <message key="plugins.pubIds.nbn.readerDisplayName">NBN:IT</message>
+   <message key="plugins.pubIds.nbn.readerDisplayName">NBN:IT</message>
+
+   <message key="plugins.pubIds.nbn.description">Questo plugin abilita l'assegnazione di NBN:IT agli articoli pubblicati in OJS.</message>
+   <message key="plugins.pubIds.nbn.issues">Registra per fascicoli</message>
+   <message key="plugins.pubIds.nbn.articles">Registra singoli articoli</message>
+   <message key="plugins.pubIds.nbn.registeredFilter">Articoli non registrati</message>
+   <message key="plugins.pubIds.nbn.registered">Registrato</message>
+   <message key="plugins.pubIds.nbn.filter">Filtra</message>
+   <message key="plugins.pubIds.nbn.noArticles">Nessun articolo soddisfa la ricerca effettuata.</message>
+   <message key="plugins.pubIds.nbn.registerDescription">Clicca il bottone per registrare questo articolo</message>
+   <message key="plugins.pubIds.nbn.registerDescription.multi">Clicca il bottone per registrare o aggiornare la registrazione degli articoli selezionati.</message>   
+   <message key="plugins.pubIds.nbn.register.title">Registra NBN</message>   
+   <message key="plugins.pubIds.nbn.register.selectArticle">Seleziona gli articoli</message>
+   <message key="plugins.pubIds.nbn.register.selectIssue">Seleziona i fascicoli</message>      
+   <message key="plugins.pubIds.nbn.register">Registrazione</message>
+   <message key="plugins.pubIds.nbn.register.success">Registrazione conclusa con successo!</message>
+   <message key="plugins.pubIds.nbn.register.warning">Registrare molti oggetti può richiedere molto tempo. Sii quindi paziente dopo aver cliccato il tasto 'Registra'. Sarai informato al completamento della registrazione.</message>   
+   <message key="plugins.pubIds.nbn.register.noCredentials"><![CDATA[La registrazione diretta è ancora disabilitata. <a href="{$settingsUrl}">Inserisci</a> le credenziali per registrare le risorse direttamente con l'agenzia di registrazione.]]></message>
    
    <!-- URN manager options, setting -->
-   <message key="plugins.pubIds.nbnit.settings">Impostazioni</message>
-   <message key="plugins.pubIds.nbnit.settings.description"><![CDATA[<a href="{$settingsUrl}">Configura</a> il plugin NBN:IT prima di utilizzarlo.]]></message>   
-   <message key="plugins.pubIds.nbnit.manager.settings.description">Inserire le credenziali dell'account comunicate dal gestore del registro NBN:IT</message>
-   <message key="plugins.pubIds.nbnit.manager.settings.urnSettings">Impostazioni NBN:IT</message>
-   <message key="plugins.pubIds.nbnit.settings.form.description">Configura il plugin di esportazione NBN:IT:</message>
-   <message key="plugins.pubIds.nbnit.settings.form.username">Username</message>
-   <message key="plugins.pubIds.nbnit.settings.form.password">Password</message>
-   <message key="plugins.pubIds.nbnit.manager.settings.namespace.choose">Scegli</message>
+   <message key="plugins.pubIds.nbn.settings">Impostazioni</message>
+   <message key="plugins.pubIds.nbn.settings.description"><![CDATA[<a href="{$settingsUrl}">Configura</a> il plugin NBN:IT prima di utilizzarlo.]]></message>   
+   <message key="plugins.pubIds.nbn.manager.settings.description">Inserire le credenziali dell'account comunicate dal gestore del registro NBN:IT</message>
+   <message key="plugins.pubIds.nbn.manager.settings.urnSettings">Impostazioni NBN:IT</message>
+   <message key="plugins.pubIds.nbn.settings.form.description">Configura il plugin di esportazione NBN:IT:</message>
+   <message key="plugins.pubIds.nbn.settings.form.username">Username</message>
+   <message key="plugins.pubIds.nbn.settings.form.password">Password</message>
+   <message key="plugins.pubIds.nbn.manager.settings.namespace.choose">Scegli</message>
 
    <!-- consider URNs at other places in the system -->
-   <message key="plugins.pubIds.nbnit.rt.metadata.urn">Uniform Resource Name</message>
+   <message key="plugins.pubIds.nbn.rt.metadata.urn">Uniform Resource Name</message>
 
    <!-- errors -->
-   <message key="plugins.pubIds.nbnit.error.pluginNotConfigured">Il plugin non è completamente configurato.</message>   
-   <message key="plugins.pubIds.nbnit.manager.settings.form.usernameRequired">Inserisci l'username.</message>
-   <message key="plugins.pubIds.nbnit.manager.settings.form.passwordRequired">Inserisci la password.</message>
-   <message key="plugins.pubIds.nbnit.register.error.mdsError">Errore nella registrazione! Il server di registrazione ha restituito un errore: '{$param}'.</message>
+   <message key="plugins.pubIds.nbn.error.pluginNotConfigured">Il plugin non è completamente configurato.</message>   
+   <message key="plugins.pubIds.nbn.manager.settings.form.usernameRequired">Inserisci l'username.</message>
+   <message key="plugins.pubIds.nbn.manager.settings.form.passwordRequired">Inserisci la password.</message>
+   <message key="plugins.pubIds.nbn.register.error.mdsError">Errore nella registrazione! Il server di registrazione ha restituito un errore: '{$param}'.</message>
    
 
 

@@ -6,49 +6,63 @@
   *
   * Copyright (c) 2003-2012 John Willinsky
   * Contributed by CILEA
+  * Upgraded to OJS3 by Alfredo Cosco (2019)  
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US locale.
   -->
  
 <locale name="en_US" full_name="U.S. English">
-   <message key="plugins.pubIds.nbnit.urns">URN</message>
+	<message key="plugins.pubIds.nbn.nbns">NBN</message>
+	<message key="plugins.pubIds.nbn.editor.nbn">NBN:IT</message>	
+	<message key="plugins.pubIds.nbn.editor.editObjectsNBN">Generate NBN:IT</message>
+	<message key="plugins.pubIds.nbn.editor.editMultipleObjectsNBN">Generate NBN:IT for all the articles in this issue</message>
+	<message key="plugins.pubIds.nbn.editor.nbnIs">The NBN for this item is</message>
+	<message key="plugins.pubIds.nbn.editor.canBeAssigned">Can be assigned</message>
+	<message key="plugins.pubIds.nbn.editor.stillAssigned">The NBN:IT is assigned to this article</message>
+	<message key="plugins.pubIds.nbn.editor.assignNBN">Assign NBN:IT</message>
+	<message key="plugins.pubIds.nbn.editor.assignNBNtoArticle">Assign NBN:IT to this article</message>
+	<message key="plugins.pubIds.nbn.editor.assignNBNtoIssue">Assign NBN:IT to all the articles in this issue</message>
+	<message key="plugins.pubIds.nbn.editor.unPublishedIssue">You will be able to request an NBN only after the Issue publication.</message>
+	<message key="plugins.pubIds.nbn.editor.issueArticlesDontHaveNBN">None or not all the articles in this issue have an NBN:IT id, click here to request the missing identifiers.</message>	
+	<message key="plugins.pubIds.nbn.editor.issueAllArticlesHaveNBN">NBN:IT exists for all the articles in this issue, you can assign it article by article in Subission/Metadata/Identifier page.</message>
 
    <!-- plugin -->
-   <message key="plugins.pubIds.nbnit.displayName">NBN:IT</message>
-   <message key="plugins.pubIds.nbnit.description">This plugin enables the registration of NBN:IT to the articles published in OJS.</message>      
-   <message key="plugins.pubIds.nbnit.issues">Register NBN for full issue(s)</message>      
-   <message key="plugins.pubIds.nbnit.articles">Register NBN for articles</message>
-   <message key="plugins.pubIds.nbnit.registeredFilter">Not registered articles</message>
-   <message key="plugins.pubIds.nbnit.registered">Registered</message>
-   <message key="plugins.pubIds.nbnit.filter">Filter</message>
-   <message key="plugins.pubIds.nbnit.noArticles">No items matching your search.</message>
-   <message key="plugins.pubIds.nbnit.registerDescription">Click this button to register this article with the registration agency.</message>      
-   <message key="plugins.pubIds.nbnit.registerDescription.multi">Click this button to register or update the meta-data of the selected article(s) with the registration agency.</message>      
-   <message key="plugins.pubIds.nbnit.register.title">Register NBN</message>
-   <message key="plugins.pubIds.nbnit.register.selectArticle">Select Articles</message>
-   <message key="plugins.pubIds.nbnit.register.selectIssue">Select Issues</message>      
-   <message key="plugins.pubIds.nbnit.register">Register</message>
-   <message key="plugins.pubIds.nbnit.register.success">Registration successful!</message>
-   <message key="plugins.pubIds.nbnit.register.warning">Registering many objects can take a long time. So please be patient after clicking the "Register" button. You'll be notified when registration is complete.</message>   
-   <message key="plugins.pubIds.nbnit.register.noCredentials"><![CDATA[Direct registration is currently disabled. Please <a href="{$settingsUrl}">configure</a> a username and password to be able to register objects directly with the registration agency.]]></message>
+   <message key="plugins.pubIds.nbn.displayName">NBN:IT</message>
+   <message key="plugins.pubIds.nbn.readerDisplayName">NBN:IT</message>
+   <message key="plugins.pubIds.nbn.description">This plugin enables the registration of NBN:IT to the articles published in OJS.</message>      
+   <message key="plugins.pubIds.nbn.issues">Register NBN for full issue(s)</message>      
+   <message key="plugins.pubIds.nbn.articles">Register NBN for articles</message>
+   <message key="plugins.pubIds.nbn.registeredFilter">Not registered articles</message>
+   <message key="plugins.pubIds.nbn.registered">Registered</message>
+   <message key="plugins.pubIds.nbn.filter">Filter</message>
+   <message key="plugins.pubIds.nbn.noArticles">No items matching your search.</message>
+   <message key="plugins.pubIds.nbn.registerDescription">Click this button to register this article with the registration agency.</message>      
+   <message key="plugins.pubIds.nbn.registerDescription.multi">Click this button to register or update the meta-data of the selected article(s) with the registration agency.</message>      
+   <message key="plugins.pubIds.nbn.register.title">Register NBN</message>
+   <message key="plugins.pubIds.nbn.register.selectArticle">Select Articles</message>
+   <message key="plugins.pubIds.nbn.register.selectIssue">Select Issues</message>      
+   <message key="plugins.pubIds.nbn.register">Register</message>
+   <message key="plugins.pubIds.nbn.register.success">Registration successful!</message>
+   <message key="plugins.pubIds.nbn.register.warning">Registering many objects can take a long time. So please be patient after clicking the "Register" button. You'll be notified when registration is complete.</message>   
+   <message key="plugins.pubIds.nbn.register.noCredentials"><![CDATA[Direct registration is currently disabled. Please <a href="{$settingsUrl}">configure</a> a username and password to be able to register objects directly with the registration agency.]]></message>
    
    <!-- URN manager options, setting -->
-   <message key="plugins.pubIds.nbnit.settings">Settings</message>
-   <message key="plugins.pubIds.nbnit.settings.description"><![CDATA[<a href="{$settingsUrl}">Configure</a> the plugin NBN:IT before using it for the first time.]]></message>   
-   <message key="plugins.pubIds.nbnit.manager.settings.description">Please enter the username and password issued by the register NBN:IT</message>
-   <message key="plugins.pubIds.nbnit.manager.settings.urnSettings">NBN:IT settings</message>
-   <message key="plugins.pubIds.nbnit.settings.form.description">Configure NBN:IT plugin</message>
-   <message key="plugins.pubIds.nbnit.settings.form.username">Username</message>
-   <message key="plugins.pubIds.nbnit.settings.form.password">Password</message>
-   <message key="plugins.pubIds.nbnit.manager.settings.namespace.choose">Choose</message>
+   <message key="plugins.pubIds.nbn.settings">Settings</message>
+   <message key="plugins.pubIds.nbn.settings.description"><![CDATA[<a href="{$settingsUrl}">Configure</a> the plugin NBN:IT before using it for the first time.]]></message>   
+   <message key="plugins.pubIds.nbn.manager.settings.description">Please enter the username and password issued by the register NBN:IT</message>
+   <message key="plugins.pubIds.nbn.manager.settings.urnSettings">NBN:IT settings</message>
+   <message key="plugins.pubIds.nbn.settings.form.description">Configure NBN:IT plugin</message>
+   <message key="plugins.pubIds.nbn.settings.form.username">Username</message>
+   <message key="plugins.pubIds.nbn.settings.form.password">Password</message>
+   <message key="plugins.pubIds.nbn.manager.settings.namespace.choose">Choose</message>
 
    <!-- consider URNs at other places in the system -->
-   <message key="plugins.pubIds.nbnit.rt.metadata.urn">Uniform Resource Name</message>
+   <message key="plugins.pubIds.nbn.rt.metadata.urn">Uniform Resource Name</message>
 
    <!-- errors -->
-   <message key="plugins.pubIds.nbnit.error.pluginNotConfigured">The plug-in is not fully set up.</message>
-   <message key="plugins.pubIds.nbnit.manager.settings.form.usernameRequired">Please enter a valid username.</message>
-   <message key="plugins.pubIds.nbnit.manager.settings.form.passwordRequired">Please enter a valid password.</message>
-   <message key="plugins.pubIds.nbnit.register.error.mdsError">Registration was not successful! The NBN registration server returned an error: '{$param}'.</message>
+   <message key="plugins.pubIds.nbn.error.pluginNotConfigured">The plug-in is not fully set up.</message>
+   <message key="plugins.pubIds.nbn.manager.settings.form.usernameRequired">Please enter a valid username.</message>
+   <message key="plugins.pubIds.nbn.manager.settings.form.passwordRequired">Please enter a valid password.</message>
+   <message key="plugins.pubIds.nbn.register.error.mdsError">Registration was not successful! The NBN registration server returned an error: '{$param}'.</message>
 </locale>

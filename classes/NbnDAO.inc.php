@@ -17,30 +17,24 @@
 
 class NbnDAO extends DAO {
 
-	/**
-	 * Constructor.
-	 */
-	function NbnDAO() {
-		parent::DAO();
-	}
-
    /**
     * Retrieve NBN for the given article.
     * @param $articleId int
     * @param $journalId int
     */   
    function getNBN($articleId, $journalId){
+	   
       $params = array(         
          (int)$articleId,
          (int)$journalId
       );
-      
+      //var_dump($params);
       $nbn = $this->concat('subnamespace', '\'-\'', 'assigned_string');
       $sql = "SELECT article_id, $nbn as nbn
               FROM nbn_assigned_string as nas join nbn_journal_subnamespace as njs on nas.journal_id = njs.journal_id
               WHERE article_id = ? AND njs.journal_id = ?";
               
-      $result =& $this->retrieve($sql, $params);
+      $result = $this->retrieve($sql, $params);
       $returner = null;
       if ($result->RecordCount() != 0) {
          $returner = isset($result->fields[1]) ? $result->fields[1] : false;
