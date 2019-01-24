@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file plugins/pubIds/nbn/classes/NbnDAO.inc.php
  *
