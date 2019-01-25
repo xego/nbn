@@ -6,7 +6,7 @@ v. 2.0.0 alpha
 
 Plugin for the automatic assignment of identifiers [urn: nbn] (http://www.depositolegale.it/national-bibliography-number/) in the namespace NBN:IT to the articles published with [Open Journal Systems] (http: // pkp.sfu.ca/?q=ojs) v. 3.
 
-Functionality'
+Functionality
 -------------
 1. Adds two tables to the DB to allow registration of NBNs.
 2. Add an interface to set the plugin in ** Settings-> Website-> Plugin-> Public Identifier Plugins **
