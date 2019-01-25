@@ -243,6 +243,13 @@ class NBNPubIdPlugin extends PubIdPlugin {
 		return $linkActions;
 	}
 	
+	/**
+	 * Get the filename of the ADODB schema for this plugin.
+	 * @return string Full path and filename to schema descriptor.
+	 */
+	function getInstallSchemaFile() {
+		return $this->getPluginPath() . '/schema.xml';
+	}
 
 	/**
 	 * @copydoc PKPPubIdPlugin::getSuffixPatternsFieldName()
