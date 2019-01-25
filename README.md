@@ -27,9 +27,7 @@ Dopo la richiesta dovrebbe apparire uno spinner finché non si ottiene una rispo
 
 Installazione  
 -------------
-L'installazione prevede due step:
-1. Apportare le modifiche al DB descritte nel file schema.xml
-2. Caricare i file sul server utilizzando l'apposito modulo di OJS dedicato all'installazione dei plugin (il plugin deve essere in formato compresso .tar.gz)
+Caricare i file sul server utilizzando l'apposito modulo di OJS dedicato all'installazione dei plugin (il plugin deve essere in formato compresso .tar.gz)
 
 Credenziali
 -----------
