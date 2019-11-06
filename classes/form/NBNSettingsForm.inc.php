@@ -57,7 +57,7 @@ class NBNSettingsForm extends Form {
       $this->_plugin = $plugin;
 
 
-      parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+      parent::__construct("../../../" . $plugin->getTemplatePath() . 'settingsForm.tpl');
 
       $this->addCheck(new FormValidatorRegExp($this, 'username', 'required', 'plugins.pubIds.nbn.manager.settings.form.usernameRequired', '/^[^:]+$/'));
       $this->addCheck(new FormValidatorRegExp($this, 'password', 'required', 'plugins.pubIds.nbn.manager.settings.form.passwordRequired', '/^[^:]+$/'));

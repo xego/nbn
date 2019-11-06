@@ -56,14 +56,14 @@ class NBNPubIdPlugin extends PubIdPlugin {
    function getDescription() {
       return __('plugins.pubIds.nbn.description');
    }
-   
-   /**
-    * @see PKPPlugin::getTemplatePath()
-    */
-   function getTemplatePath() {
-      return parent::getTemplatePath().'templates/';
-   }  
-   
+
+   // /**
+   //  * @see PKPPlugin::getTemplatePath()
+   //  */
+   // function getTemplatePath() {
+      // return parent::getTemplatePath().'templates/';
+   // }  
+
 	//
 	// Implement template methods from PubIdPlugin.
 	//
