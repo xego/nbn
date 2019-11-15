@@ -107,7 +107,7 @@ class NBNPubIdPlugin extends PubIdPlugin {
 	 */
 	function getPubIdMetadataFile() {
 		//var_dump($this);
-		return $this->getTemplatePath().'nbnSuffixEdit.tpl';
+		return $this->getTemplateResource('nbnSuffixEdit.tpl');
 	}
 
 	/**

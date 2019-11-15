@@ -230,7 +230,7 @@
 
       // Prepare and display the issue template.
       $templateMgr->assign_by_ref('issues', $issues);
-      $templateMgr->display($this->getTemplatePath() . 'issues.tpl');
+      $templateMgr->display($this->getTemplateResource('issues.tpl'));
    }
    
    //

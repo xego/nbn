@@ -15,7 +15,7 @@
 {assign var=enableObjectNBN value=$pubIdPlugin->getSetting($currentContext->getId(), "enabled")}
 {assign var=contextId value=$currentContext->getId()}
 {assign var=articleId value=$pubIdPlugin->getArticleId($pubObject)}
-{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
+{assign var=templatePath value=$pubIdPlugin->getTemplateResource()}
 
 <!--p>pubObjectType: {$pubObjectType}</p>
 <p>isPub: {$isPublished}</p-->

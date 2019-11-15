@@ -27,7 +27,7 @@
 				{/if}
 			{/fbvFormSection}
 		{else}
-			{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
+			{assign var=templatePath value=$pubIdPlugin->getTemplateResource()}
 			{include file="`$templatePath`nbnAssignCheckBox.tpl" pubId=$pubId pubObjectType=$pubObjectType}
 		{/if}
 	{/if}
