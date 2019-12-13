@@ -22,7 +22,7 @@ class NBNSettingsForm extends Form {
    //
    	/** @var integer */
 	var $_contextId;
-   
+
 	/**
 	 * Get the context ID.
 	 * @return integer
@@ -30,7 +30,7 @@ class NBNSettingsForm extends Form {
 	function _getContextId() {
 		return $this->_contextId;
 	}
-	
+
 	/** @var NBNPubIdPlugin */
 	var $_plugin;
 
@@ -52,29 +52,29 @@ class NBNSettingsForm extends Form {
     * @param $journalId integer
     */
    function __construct($plugin, $contextId) {
-	   
+
       $this->_contextId = $contextId;
       $this->_plugin = $plugin;
 
 
-      parent::__construct("../../../" . $plugin->getTemplateResource('settingsForm.tpl'));
+      parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
       $this->addCheck(new FormValidatorRegExp($this, 'username', 'required', 'plugins.pubIds.nbn.manager.settings.form.usernameRequired', '/^[^:]+$/'));
       $this->addCheck(new FormValidatorRegExp($this, 'password', 'required', 'plugins.pubIds.nbn.manager.settings.form.passwordRequired', '/^[^:]+$/'));
       $this->addCheck(new FormValidatorPost($this));
    }
-   
+
 
 
    /**
     * @see Form::initData()
     */
 	function initData() {
-		
+
 		$contextId = $this->_getContextId();
 		 //var_dump($contextId);
 		$plugin = $this->_getPlugin();
-		
+
 		foreach($this->_getFormFields() as $fieldName => $fieldType) {
 			//var_dump($this);
 			$this->setData($fieldName, $plugin->getSetting($contextId, $fieldName));
@@ -108,7 +108,7 @@ class NBNSettingsForm extends Form {
          'password' => 'string'
       );
    }
-   
+
    /**
     * Check whether a given setting is optional.
     * @param $settingName string
@@ -116,8 +116,8 @@ class NBNSettingsForm extends Form {
     */
    function isOptional($settingName) {
       return in_array($settingName, array());
-   }   
-   
+   }
+
 }
 
 ?>
